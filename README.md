@@ -11,19 +11,21 @@ Next version features:
 * auto resiging custom view loaded from nib.
 
 #Usage
+
 ```
 #import "CommonAlert.h"
+// Example-1  Custom View
+// Assign custom view for a specific screen
 
-#Example1  Custom View
-//Assign custom view for a specific screen
     self.viewCustomAlert = [self.storyboard instantiateViewControllerWithIdentifier:@"viewCustomAlert"];
-    
     CommonAlert *alert1 = [[CommonAlert alloc]initWithAlertView:(CommonAlert *)self.viewCustomAlert.view showFrom:self.view];
     [alert1 showAnimated:TRUE];
     
-#Example2  Common view for Application
 
-//Assign common alert for app
+// Example-2  Common view for Application
+// Assign common alert for app
+
+
 CommonAlert *alert = [CommonAlert alertWithTitle:@"Hey" message:@"This is completed" withDoneCancel:YES];
 
 [alert setDismissBlockWithButtonIndex:^(NSInteger index) {
@@ -43,5 +45,4 @@ CommonAlert *alert = [CommonAlert alertWithTitle:@"Hey" message:@"This is comple
 }];
 
 [alert showAnimated:TRUE];
-
 ```
