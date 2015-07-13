@@ -15,7 +15,7 @@ Next version features:
 #import "CommonAlert.h"
 
 #Example1  Custom View
-//Asign custom view
+//Assign custom view for a specific screen
     self.viewCustomAlert = [self.storyboard instantiateViewControllerWithIdentifier:@"viewCustomAlert"];
     
     CommonAlert *alert1 = [[CommonAlert alloc]initWithAlertView:(CommonAlert *)self.viewCustomAlert.view showFrom:self.view];
@@ -23,6 +23,7 @@ Next version features:
     
 #Example2  Common view for Application
 
+//Assign common alert for app
 CommonAlert *alert = [CommonAlert alertWithTitle:@"Hey" message:@"This is completed" withDoneCancel:YES];
 
 [alert setDismissBlockWithButtonIndex:^(NSInteger index) {
